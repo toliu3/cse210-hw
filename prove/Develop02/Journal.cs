@@ -13,7 +13,7 @@ public class Journal
         {
             entry.Display(); // Call the Display() of Entry
         }
-
+        
     }
 
     // A method that saves the file with .txt and
