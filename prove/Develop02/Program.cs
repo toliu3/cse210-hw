@@ -71,6 +71,7 @@ public class Program
             Console.WriteLine("What is the filename you want ot load?");
             journalLoad._filename = Console.ReadLine();
             journalLoad._journals = journalLoad.LoadFile();
+            Console.WriteLine($"{journalLoad._filename} has been downloaded.");
 
         }
         // Ask the user filename that he wants to save
@@ -80,12 +81,14 @@ public class Program
             Console.WriteLine($"What is the filename? ");
             journalBook._filename = Console.ReadLine();
             journalBook.SaveFilej();
+            Console.WriteLine($"{journalBook._filename} is saved.");
             
         }
         // Quit the loop
         else
         {
             repeat = false;
+            Console.WriteLine("Thank you and Good Bye!");
         }
         }
     }

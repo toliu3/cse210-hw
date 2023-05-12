@@ -31,7 +31,7 @@ public class Journal
         // Clear the list after saving to avoid duplicate storage.
         _journals.Clear();
     }
-    //A method that file from cumputer.
+    //A method that loads file from cumputer.
     // Restore from txt to list.
     public List<Entry> LoadFile()
     {
