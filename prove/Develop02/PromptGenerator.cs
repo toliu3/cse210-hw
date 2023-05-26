@@ -17,10 +17,10 @@ public class PromtGenerator
        copys.RemoveAt(number);                          
                                                             
         //If the copy list is empty then copy again.
-       if (copys.Count == 0)
-       {
-        _Prompts = new List<string>(copys);
-       }
+      // if (copys.Count == 0)
+      // {
+      //  _Prompts = new List<string>(copys);
+     //  }
 
        // return prompt to main program. 
        return _Prompt; 
