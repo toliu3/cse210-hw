@@ -1,6 +1,6 @@
 using System;
 using System.Text.RegularExpressions;
-public class Word
+public class Word // Replace the letter with "_".
 {
     private string _word;
 

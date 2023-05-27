@@ -1,9 +1,12 @@
 using System;
 public class ScripturesDic
+ // Store scriptures as dictionaries in a list and choice a scripture by random.
 {
     private int _randomInt;
+    private Dictionary<string, string> _scripture;
+    
 
-    public Dictionary<string, string> GetScrpture()
+    public Dictionary<string, string> GetScrpture() // This function will return a scripture.
     {    
         List<Dictionary<string, string>> scriptures = new List<Dictionary<string, string>>();
         Dictionary<string, string> scripture1 = new Dictionary<string, string>();
@@ -46,11 +49,14 @@ public class ScripturesDic
         scripture5["Text"] = "And this is life eternal, that they might know thee the only true God, and Jesus Christ, whom thou hast sent.";
         scriptures.Add(scripture5);
 
+        
+        
+        // Choose a scripture from a list by random.
         Random random = new Random();
         _randomInt = random.Next(0,5);
-        Dictionary<string, string> scripture = scriptures[_randomInt];
+        _scripture = scriptures[_randomInt];
 
-        return scripture;
+        return _scripture; // Return a chosen scripture.
     }
 
 
