@@ -9,7 +9,8 @@ public class WritingAssignment : Assignment
 
     public string GetWritingInformation()
     {
-        string getWritingInformation = $"The Causes of {_title} by {_studentName}";
+        string studentName = GetStudentName();
+        string getWritingInformation = $"The Causes of {_title} by {studentName}";
         return getWritingInformation;
     }
 
