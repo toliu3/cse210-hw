@@ -1,0 +1,18 @@
+using System;
+namespace Develop04
+{
+public class BreathingActivity : Activity
+{
+ private  string _BreatheInMessage ;
+ private  string _BreatheOutMessage ;
+
+ public BreathingActivity(string name, string description, string breatheInActivity, string breatheOutMessage) : base(name, description )
+ {
+    _BreatheInMessage = breatheInActivity;
+    _BreatheOutMessage = breatheOutMessage;
+
+ }
+
+
+}
+}
