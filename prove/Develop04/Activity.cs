@@ -1,4 +1,3 @@
-using System;
 public class Activity
 {
     private string _activityName ;
@@ -13,13 +12,14 @@ public class Activity
 
     public void DisplayStartMessage()
     {
+        Console.Clear();
         Console.WriteLine($"Welcome to the {_activityName} Activity.");
         Console.WriteLine();
         Console.WriteLine(_activityDescription);
         Console.WriteLine();
     }
 
-    private void Spinner(int seconds)
+    protected void Spinner(int seconds)
     {
         string [] spinnerFrames = { "|", "/", "-", "\\" };
 
@@ -32,7 +32,7 @@ public class Activity
             string s = spinnerFrames[i];
             Console.Write(s);
             Thread.Sleep(1000);
-            Console.Write("/b /b");
+            Console.Write("\b \b");
 
             i++;
 
@@ -47,13 +47,14 @@ public class Activity
 
     public void StartActivity()
     {
+    
         DisplayStartMessage();
-        Console.WriteLine($"How long, in seconds, would you like in your section? ");
+        Console.Write($"How long, in seconds, would you like in your section? ");
         _duration = int.Parse( Console.ReadLine());
         Console.Clear();
-        Console.WriteLine("Get ready.....");
+        Console.WriteLine("Get ready....");
         Spinner(7);
-        Console.Clear();
+        Console.WriteLine();
 
     }
 
@@ -61,15 +62,23 @@ public class Activity
     {
         Console.WriteLine();
         Console.WriteLine("Well done!!");
-        Spinner(6);
-        Console.Write("/b /b");
+        Spinner(4);
+        Console.Write("\b \b");
         Console.WriteLine($"You have completed another {_duration} seconds of the {_activityName} Activity.");
         Spinner(6);
         Console.Clear();
                 
     }
 
-  
+    public void CountDown(int n)
+    {
+        for (int i = n; i >0; i --)
+        {
+            Console.Write(i);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+        }
+    }
 
 
 }
