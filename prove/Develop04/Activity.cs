@@ -10,7 +10,7 @@ public class Activity
         _activityDescription = description;
     }
 
-    public void DisplayStartMessage()
+    protected void DisplayStartMessage()
     {
         Console.Clear();
         Console.WriteLine($"Welcome to the {_activityName} Activity.");
@@ -31,7 +31,7 @@ public class Activity
         {
             string s = spinnerFrames[i];
             Console.Write(s);
-            Thread.Sleep(1000);
+            Thread.Sleep(300);
             Console.Write("\b \b");
 
             i++;
@@ -53,7 +53,7 @@ public class Activity
         _duration = int.Parse( Console.ReadLine());
         Console.Clear();
         Console.WriteLine("Get ready....");
-        Spinner(7);
+        Spinner(5);
         Console.WriteLine();
 
     }
@@ -70,7 +70,7 @@ public class Activity
                 
     }
 
-    public void CountDown(int n)
+    protected void CountDown(int n)
     {
         for (int i = n; i >0; i --)
         {
