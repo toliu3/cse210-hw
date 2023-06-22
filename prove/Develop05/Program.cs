@@ -13,7 +13,7 @@ class Program
         while (repeat== true)
         {
             Console.WriteLine();
-            Console.WriteLine($"You have {goal.GetScore()} points");
+            Console.WriteLine($"You have {tracker.GetScore()} points");
             Console.WriteLine();    
             Console.WriteLine("Menu Options:");
             Console.WriteLine("  1. Create New Goal");
@@ -65,8 +65,14 @@ class Program
 
             else if (choice == "3")
             {
-                
+                tracker.SaveGoals(goals);
             } 
+
+            else if (choice == "4")
+            {
+                goals = tracker.LoadGoals();
+            } 
+
 
             else
             {

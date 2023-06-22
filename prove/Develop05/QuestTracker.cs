@@ -1,9 +1,13 @@
 using System;
 using System.Collections.Generic;
-private string _filename;
+using System.IO;
+
 
 public class QuestTracker
 {
+    private string _fileName;
+    private int _score;
+
     public List<string> _goals;
     public QuestTracker( List<string> goals)
     {
@@ -25,10 +29,11 @@ public class QuestTracker
             string[] parts = value.Split(',');
                 if (parts[0] == "SimpleGoal")
                 {
-                    Console.WriteLine($"{n}. [ ] {parts[1]} ({parts[2]}) ");
-                    if (parts[4] == "true")
+                    if (bool.Parse(parts[4]) == false)
+                        Console.WriteLine($"{n}. [ ] {parts[1]} ({parts[2]}) ");
+                    else if (bool.Parse(parts[4]) == true)
                     {
-                      Console.WriteLine($"{n}. [X] {parts[1]} ({parts[2]}) ");   
+                        Console.WriteLine($"{n}. [X] {parts[1]} ({parts[2]}) ");   
                     }
                    
                     n += 1;
@@ -49,10 +54,41 @@ public class QuestTracker
 
     }
 
-    public void SaveGoals()
+    public void SaveGoals(List<string> goals)
     {
-        Console.WriteLine("What is the filename for the goal file? ");
-        _filename = Console.ReadLine();
-
+        Console.Write("What is the filename for the goal file? ");
+        _fileName = Console.ReadLine();
+        using (StreamWriter writer = new StreamWriter(_fileName))
+        {
+            foreach (string item in goals)
+            {
+                writer.WriteLine(item);
+            }
+        }
     }
+
+    public List<string> LoadGoals()
+    {
+        Console.Write("What is the filename for the goal file? ");
+        _fileName = Console.ReadLine();
+        
+        string[] lines = File.ReadAllLines(_fileName);
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split(',');
+            int item = parts.Count();
+            if (item == 1)
+            {
+                _score = int.Parse(parts[0]);
+            }
+            _goals.Add(line);
+        }
+        return _goals;
+    }
+
+    public int GetScore()
+    {
+        return _score;
+    }
+
 }
