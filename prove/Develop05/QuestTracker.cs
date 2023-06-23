@@ -166,7 +166,15 @@ public class QuestTracker
 
     private void Congratulate(int points, int score)
     {
-        Console.WriteLine($"Congrutulations! you have earned {points} points!");
+        Console.Clear();
+        Console.WriteLine(" CCCC    OOOO    N    N   GGGG   RRRRR    AAAA   TTTTTT  U     U  L        AAAA   TTTTTT   IIII   OOOO   N    N     !!!  ");
+        Console.WriteLine("C    C  O    O   NN   N  G       R    R  A    A    TT    U     U  L       A    A    TT      II   O    O  NN   N     !!!  ");
+        Console.WriteLine("C       O    O   N N  N  G   GG  R    R  A    A    TT    U     U  L       A    A    TT      II   O    O  N N  N     !!!  ");
+        Console.WriteLine("C       O    O   N  N N  G    G  RRRRR   AAAAAA    TT    U     U  L       AAAAAA    TT      II   O    O  N  N N      !   ");
+        Console.WriteLine("C    C  O    O   N   NN  G    G  R   R   A    A    TT    U     U  L       A    A    TT      II   O    O  N   NN          ");
+        Console.WriteLine(" CCCC    OOO0    N    N   GGGG   R    R  A    A    TT     UUUUU   LLLLLL  A    A    TT     IIII   O00O   N    N      !!  ");
+        Console.WriteLine();
+        Console.WriteLine($"you have earned {points} points!");
         Console.WriteLine($"YOu now have {score} points"); 
     }
 
