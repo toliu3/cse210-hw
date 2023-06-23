@@ -49,7 +49,6 @@ public class QuestTracker
                     n += 1;
                 }
             
-
         }
 
     }
@@ -89,6 +88,27 @@ public class QuestTracker
     public int GetScore()
     {
         return _score;
+    }
+
+    public void RecordEvent()
+    {
+        Console.WriteLine("The goals are:");
+        int n = 1;
+        foreach (string value in _goals)
+        {
+            string[] parts = value.Split(',');
+                    Console.WriteLine($"{n}. {parts[1]} ");   
+                   
+                    n += 1;
+        }
+       Console.WriteLine("Which goal did you accomplish? ");
+       int ans = int.Parse (Console.ReadLine());
+       string[] lines = _goals[ans].Split(',');  
+       if (lines[0] == "SimpleGoal" )
+       {
+        
+       }
+
     }
 
 }

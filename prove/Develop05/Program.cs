@@ -72,6 +72,10 @@ class Program
             {
                 goals = tracker.LoadGoals();
             } 
+            else if (choice == "5")
+            {
+                goals = tracker.LoadGoals();
+            } 
 
 
             else
