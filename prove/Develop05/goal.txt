@@ -1,3 +1,0 @@
-100
-SimpleGoal,sdew,ssda fgd ddes,50,true
-ChecklistGoal,wqsc,ghj jyh juk hgy,50,0,6,500

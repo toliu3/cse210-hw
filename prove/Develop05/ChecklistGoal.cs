@@ -7,6 +7,8 @@ public class ChecklistGoal : Goal
     private string _times;
     private string _bonus;
     private string _completedTimes;
+    private string _goal;
+
 
     public ChecklistGoal(string checklistgoal) : base(checklistgoal)
     {
@@ -28,8 +30,8 @@ public class ChecklistGoal : Goal
         Console.Write("What is the bonus for accomplishing it that many times? ");
         _bonus = Console.ReadLine();
 
-        string goal = $"{_title},{_goalName},{_description},{_points},{_completedTimes},{_times},{_bonus}";
-        return goal;
+        _goal = $"{_title},{_goalName},{_description},{_points},{_completedTimes},{_times},{_bonus}";
+        return _goal;
     }
 
 }

@@ -1,5 +1,5 @@
 using System;
-
+using System.Drawing;
 class Program
 {
     static void Main(string[] args)
@@ -9,6 +9,10 @@ class Program
         QuestTracker tracker = new QuestTracker(goals);
         string title = "title";
         Goal goal = new Goal(title);
+        SimpleGoal simplegoal = new SimpleGoal("SimpleGoal");
+        EternalGoal eternalgoal = new EternalGoal("EternalGoal");
+        ChecklistGoal checklistgoal = new ChecklistGoal("ChecklistGoal");
+
         bool repeat = true;
         while (repeat== true)
         {
@@ -36,23 +40,17 @@ class Program
                 string typegoal = Console.ReadLine();
                 if (typegoal == "1")
                 {
-                   SimpleGoal simplegoal = new SimpleGoal("SimpleGoal");
                    string goalRecord = simplegoal.GetGoal();
-                   goals[0] = goal.GetScore().ToString();
                    goals = tracker.UpdateGoal(goalRecord);
                 }
                 else if (typegoal == "2")
                 {
-                   EternalGoal eternalgoal = new EternalGoal("EternalGoal");
                    string goalRecord = eternalgoal.GetGoal();
-                   goals[0] = goal.GetScore().ToString();
                    goals = tracker.UpdateGoal(goalRecord);
                 }
                 else if (typegoal == "3")
                 {
-                   ChecklistGoal checklistgoal = new ChecklistGoal("ChecklistGoal");
                    string goalRecord = checklistgoal.GetGoal();
-                   goals[0] = goal.GetScore().ToString();
                    goals = tracker.UpdateGoal(goalRecord);
                 }
 
@@ -65,6 +63,8 @@ class Program
 
             else if (choice == "3")
             {
+                string score = tracker.GetScore().ToString();
+                goals[0] = score;
                 tracker.SaveGoals(goals);
             } 
 
@@ -74,20 +74,19 @@ class Program
             } 
             else if (choice == "5")
             {
-                goals = tracker.LoadGoals();
+                tracker.RecordEvent();                
+
             } 
 
 
             else
             {
+
                 repeat = false;
             }   
-
-
-        
         }
-
-
+                
 
     }
+
 }

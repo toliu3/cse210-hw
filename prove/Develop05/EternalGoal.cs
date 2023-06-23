@@ -4,6 +4,8 @@ public class EternalGoal : Goal
     private string _description;
     private string _points;
     private string _title;
+    private string _goal;
+
     public EternalGoal( string enternalgoal) : base(enternalgoal)
     {
         _title = enternalgoal;
@@ -18,8 +20,8 @@ public class EternalGoal : Goal
         _description =  Console.ReadLine();
         Console.Write("What is the amount of points associated with this goal? ");
         _points = Console.ReadLine();
-        string goal = $"{_title},{_goalName},{_description},{_points}";
-        return goal;
+        _goal = $"{_title},{_goalName},{_description},{_points}";
+        return _goal;
     }
 
 }
