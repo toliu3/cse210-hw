@@ -6,8 +6,8 @@ class Program
         List<string> goals = new List<string>();
         goals.Add("0");
         QuestTracker tracker = new QuestTracker(goals);
-        string title = "title";
-        Goal goal = new Goal(title);
+        string goalName = "gaolName";
+        Goal goal = new Goal(goalName);
         SimpleGoal simplegoal = new SimpleGoal("SimpleGoal");
         EternalGoal eternalgoal = new EternalGoal("EternalGoal");
         ChecklistGoal checklistgoal = new ChecklistGoal("ChecklistGoal");

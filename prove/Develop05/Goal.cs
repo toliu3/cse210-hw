@@ -1,17 +1,17 @@
 public class Goal
 {
-    private string _title;
+    private string _gaolName;
 
-    public Goal(string title)
+    public Goal(string goalName)
     {
-        _title = title;
+        _gaolName = goalName;
 
     }
 
 
     public virtual string GetGoal()
     {
-        return _title;
+        return _gaolName;
     }
 
 
