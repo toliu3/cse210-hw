@@ -2,26 +2,25 @@ public class EternalGoal : Goal
 {
     private string _goalName;
     private string _description;
-    private string _points;
+    private int _points;
     private string _title;
     private string _goal;
 
-    public EternalGoal( string enternalgoal) : base(enternalgoal)
+
+    public EternalGoal( string enternalgoal, string title, string description, int points) : base(enternalgoal)
     {
-        _title = enternalgoal;
+        _goalName = enternalgoal;
+        _title = title;
+        _description = description;
+        _points = points;
     }
 
     public override string GetGoal()
     {
-        Console.WriteLine();
-        Console.Write("What is the name of your gosl? ");
-        _goalName =  Console.ReadLine();
-        Console.Write("What is the short description of it? ");
-        _description =  Console.ReadLine();
-        Console.Write("What is the amount of points associated with this goal? ");
-        _points = Console.ReadLine();
-        _goal = $"{_title},{_goalName},{_description},{_points}";
+        _goal = $"{_goalName},{_title},{_description},{_points.ToString()}";
         return _goal;
     }
+
+
 
 }

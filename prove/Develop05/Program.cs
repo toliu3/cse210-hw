@@ -8,9 +8,6 @@ class Program
         QuestTracker tracker = new QuestTracker(goals);
         string goalName = "gaolName";
         Goal goal = new Goal(goalName);
-        SimpleGoal simplegoal = new SimpleGoal("SimpleGoal");
-        EternalGoal eternalgoal = new EternalGoal("EternalGoal");
-        ChecklistGoal checklistgoal = new ChecklistGoal("ChecklistGoal");
 
         bool repeat = true;
         while (repeat== true)
@@ -37,19 +34,34 @@ class Program
                 Console.WriteLine("  3. Checklist Goal");
                 Console.Write("Which type of goal would you like to create? ");
                 string typegoal = Console.ReadLine();
+                Console.WriteLine();
+                Console.Write("What is the name of your gosl? ");
+                string title =  Console.ReadLine();
+                Console.Write("What is the short description of it? ");
+                string description =  Console.ReadLine();
+                Console.Write("What is the amount of points associated with this goal? ");
+                int points = int.Parse(Console.ReadLine());
+
                 if (typegoal == "1")
                 {
-                   string goalRecord = simplegoal.GetGoal();
+                   SimpleGoal simpleGoal = new SimpleGoal("SimpleGoal", title, description, points);
+                   string goalRecord = simpleGoal.GetGoal();
                    goals = tracker.UpdateGoal(goalRecord);
                 }
                 else if (typegoal == "2")
                 {
-                   string goalRecord = eternalgoal.GetGoal();
+                   EternalGoal eternalGoal = new EternalGoal("EternalGoal", title, description, points);
+                   string goalRecord = eternalGoal.GetGoal();
                    goals = tracker.UpdateGoal(goalRecord);
                 }
                 else if (typegoal == "3")
                 {
-                   string goalRecord = checklistgoal.GetGoal();
+                   Console.Write("How many times does this goal need to be accomplished for a bonus? ");
+                   string times =  Console.ReadLine();
+                   Console.Write("What is the bonus for accomplishing it that many times? ");
+                   string bonus = Console.ReadLine();
+                   ChecklistGoal checklistGoal = new ChecklistGoal("ChecklistGoal", title, description, points, times, bonus);
+                   string goalRecord = checklistGoal.GetGoal();
                    goals = tracker.UpdateGoal(goalRecord);
                 }
 
@@ -57,6 +69,7 @@ class Program
             }
             else if (choice == "2") 
             {
+
                 tracker.DisplayGoals();                
             }       
 
@@ -73,8 +86,7 @@ class Program
             } 
             else if (choice == "5")
             {
-                tracker.RecordEvent();                
-
+                tracker.RecordEvent();
             } 
 
 

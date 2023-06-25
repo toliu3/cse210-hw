@@ -9,7 +9,7 @@ public class QuestTracker
     private int _score;
     private int _points;
 
-    public List<string> _goals;
+    private List<string> _goals;
     public QuestTracker( List<string> goals)
     {
         _goals = goals;
@@ -164,9 +164,9 @@ public class QuestTracker
 
     }
 
-    private void Congratulate(int points, int score)
+    public void Congratulate(int points, int score)
     {
-        Console.Clear();
+        Console.WriteLine();
         Console.WriteLine(" CCCC    OOOO    N    N   GGGG   RRRRR    AAAA   TTTTTT  U     U  L        AAAA   TTTTTT   IIII   OOOO   N    N     !!!  ");
         Console.WriteLine("C    C  O    O   NN   N  G       R    R  A    A    TT    U     U  L       A    A    TT      II   O    O  NN   N     !!!  ");
         Console.WriteLine("C       O    O   N N  N  G   GG  R    R  A    A    TT    U     U  L       A    A    TT      II   O    O  N N  N     !!!  ");

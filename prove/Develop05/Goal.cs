@@ -1,6 +1,9 @@
+using System.Collections.Generic;
+
 public class Goal
 {
     private string _gaolName;
+
 
     public Goal(string goalName)
     {
@@ -13,6 +16,13 @@ public class Goal
     {
         return _gaolName;
     }
+
+    public virtual string RecordEvent(List<string> lines)
+    {
+        return _gaolName;
+    }
+
+
 
 
 
