@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 public class Goal
 {
     private string _gaolName;
@@ -17,10 +15,6 @@ public class Goal
         return _gaolName;
     }
 
-    public virtual string RecordEvent(List<string> lines)
-    {
-        return _gaolName;
-    }
 
 
 
