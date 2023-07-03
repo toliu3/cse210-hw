@@ -2,10 +2,10 @@ public class Product
 {
     private string _name;
     private string _productId;
-    private decimal _price;
+    private double _price;
     private int _quantity;
 
-    public Product(string name, string productId, decimal price, int quantity)
+    public Product(string name, string productId, double price, int quantity)
     {
         _name = name;
         _productId = productId;
@@ -13,7 +13,7 @@ public class Product
         _quantity = quantity;
     }
 
-    public decimal Caculate()
+    public double Caculate()
     {
         return _price * _quantity;
     }

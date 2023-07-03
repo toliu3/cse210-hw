@@ -9,9 +9,9 @@ public class Order
         _customer = customer;
     }
 
-    public decimal TotalPrice()
+    public double TotalPrice()
     {
-        decimal totalPrice = 0;
+        double totalPrice = 0;
         foreach (Product product in _products )
         {
             totalPrice +=  product.Caculate();
