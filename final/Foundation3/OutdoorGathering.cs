@@ -9,7 +9,7 @@ public class OutdoorGathering : Event
 
     public string GetFullDetails()
     {
-        return $"Full Details:\nType of the Event: OutdorGathering\n{base.GetStanderDetails()}\nWeather: {_weather}\n";
+        return $"Full Details:\n-------------\nType of the Event: OutdorGathering\n{base.GetStanderDetails()}\nWeather: {_weather}\n";
     }
 
 

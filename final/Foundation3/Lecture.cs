@@ -11,6 +11,6 @@ public class Lecture : Event
 
     public string GetFullDetails()
     {
-        return $"Full Details:\nType of the Event: Lecture\n{base.GetStanderDetails()}\nSpeaker: {_speaker}\nCapacity: {_capacity}\n";
+        return $"Full Details:\n-------------\nType of the Event: Lecture\n{base.GetStanderDetails()}\nSpeaker: {_speaker}\nCapacity: {_capacity}\n";
     }
 }

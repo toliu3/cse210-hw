@@ -27,6 +27,7 @@ class Program
         video1._videoLength = 320;
         video1._comments = comments1;
         videos.Add(video1);
+        
         //
         List<Comment> comments2 = new List<Comment>();
         Comment comment21 = new Comment();
@@ -55,6 +56,7 @@ class Program
         video2._videoLength = 435;
         video2._comments = comments2;
         videos.Add(video2);
+
         //
         List<Comment> comments3 = new List<Comment>();
         Comment comment31 = new Comment();

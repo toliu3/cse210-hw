@@ -9,7 +9,7 @@ public class Reception : Event
 
     public string GetFullDetails()
     {
-        return $"Full Details:\nType of the Event: Reception\n{base.GetStanderDetails()}\nRSVP email: {_email}\n";
+        return $"Full Details:\n-------------\nType of the Event: Reception\n{base.GetStanderDetails()}\nRSVP email: {_email}\n";
     }
 
 }

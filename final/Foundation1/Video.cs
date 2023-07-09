@@ -18,7 +18,7 @@ public class Video
         {
             comment.Display();
         }
-        Console.WriteLine();    
+        Console.WriteLine("-----------------------------------------------------------------------------");
         
     }
 

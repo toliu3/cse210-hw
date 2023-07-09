@@ -16,10 +16,12 @@ class Program
 
         Order order1 = new Order(product1s, customer1);
         Console.WriteLine("Order 1");
+        Console.WriteLine("-------");
+
         Console.WriteLine(order1.GetPackingLabel());
         Console.WriteLine(order1.GetShippingLabel());
         Console.WriteLine("Total price: $" + order1.TotalPrice()+"\n");
-
+        Console.WriteLine("===========================================================================");
 
         List<Product> product2s = new List<Product>();
         Address address2 = new Address("No.298, Siwei St.", "Guanmiao Dist.", "Tainan City", "Taiwan");
@@ -33,6 +35,7 @@ class Program
 
         Order order2 = new Order(product2s, customer2);
         Console.WriteLine("Order 2");
+        Console.WriteLine("-------");
         Console.WriteLine(order2.GetPackingLabel());
         Console.WriteLine(order2.GetShippingLabel());
         Console.WriteLine("Total price: $" + order2.TotalPrice()+"\n");
